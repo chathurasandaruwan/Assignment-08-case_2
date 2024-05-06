@@ -11,11 +11,40 @@
             width: 100vw;
             text-align: center;
             background-color: darkslategrey;
+            position: relative;
         }
         section>h1{
             color: white;
             font-size: 72px;
             padding-top: 30px;
+        }
+        section>main{
+            height: 100px;
+            width: 1650px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+        .colorBox{
+            width: 230px;
+            height: 100px;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        section>main>div:first-child{
+            margin-top: -10%;
+            margin-right: 100px;
+        }
+        section>main>div:last-child{
+            margin-top: 10%;
+            margin-left: 100px;
         }
 
     </style>
@@ -23,6 +52,16 @@
 <body>
 <section>
     <h1>java Script Queue</h1>
+    <main>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+        <div class="colorBox"></div>
+
+
+    </main>
 </section>
 
 
