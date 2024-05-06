@@ -84,15 +84,20 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    let colorAr =["red","green","blue","yellow","pink","purple"];
+    let colorAr =["red","green","blue","yellow","pink","deeppink"];
 
-    $(".colorBox").eq(0).css({backgroundColor: colorAr[0]});
-    $(".colorBox").eq(1).css({backgroundColor: colorAr[1]});
-    $(".colorBox").eq(2).css({backgroundColor: colorAr[2]});
-    $(".colorBox").eq(3).css({backgroundColor: colorAr[3]});
-    $(".colorBox").eq(4).css({backgroundColor: colorAr[4]});
-    $(".colorBox").eq(5).css({backgroundColor: colorAr[5]});
+    function changeColor() {
+        let lastValue = colorAr.pop();
+        colorAr.unshift(lastValue);
 
+        $(".colorBox").eq(0).css({backgroundColor: colorAr[0]});
+        $(".colorBox").eq(1).css({backgroundColor: colorAr[1]});
+        $(".colorBox").eq(2).css({backgroundColor: colorAr[2]});
+        $(".colorBox").eq(3).css({backgroundColor: colorAr[3]});
+        $(".colorBox").eq(4).css({backgroundColor: colorAr[4]});
+        $(".colorBox").eq(5).css({backgroundColor: colorAr[5]});
+    }
+    changeColor();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
