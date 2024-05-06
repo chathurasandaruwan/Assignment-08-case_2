@@ -89,7 +89,6 @@
     function changeColor() {
         let lastValue = colorAr.pop();
         colorAr.unshift(lastValue);
-
         $(".colorBox").eq(0).css({backgroundColor: colorAr[0]});
         $(".colorBox").eq(1).css({backgroundColor: colorAr[1]});
         $(".colorBox").eq(2).css({backgroundColor: colorAr[2]});
